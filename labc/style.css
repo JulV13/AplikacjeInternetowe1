@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(57, 57, 57);
+    color: rgb(81, 235, 158);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#loc {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.kontenerOgolny {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#kontenerMapy, #kontenerRastra, #kontenerPuzli, #kontenerUkladanki {
+    width: 500px;
+    height: 500px;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    border: 4px solid rgb(81, 235, 158);
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+}
+
+.puzzle-siatka {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.kawalekUkladanki {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(81, 235, 158);
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: move;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kawalekUkladanki.dragging {
+    opacity: 0.5;
+}
+
+.miejsceNaPuzla {
+    width: 100%;
+    height: 100%;
+    border: 1px dashed rgb(81, 235, 158);
+    background-color: rgba(81, 235, 158, 0.1);
+}
+
+#rastr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kawalekUkladanki img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#mapa {
+    width: 100%;
+    height: calc(100% - 50px);
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+#zlokalizujMnie, #pobierzMape {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(81, 235, 158);
+    color: rgb(57, 57, 57);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#zlokalizujMnie:hover, #pobierzMape:hover {
+    background-color: rgb(61, 215, 138);
+    transform: translateX(-50%) scale(1.05);
+}
+
+#rastr:hover, #puzle:hover, #ukladanka:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(81, 235, 158, 0.3);
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
