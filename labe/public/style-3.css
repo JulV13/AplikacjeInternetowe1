@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', monospace;
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+
+header {
+    border-radius: 0%;
+    transform: none;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    color: #5cff98;
+    text-shadow: none;
+    margin: 0 auto;
+    font-style: normal;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: -10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5vw;
+    margin: 0 auto;
+    text-align: center;  
+    font-style: normal; 
+    text-decoration: none;
+}
+
+h2 {
+    color: #5cff98;
+    font-size: 3vw;
+    margin: 0 auto;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+}
+
+h2:hover{
+    color: #5cff98;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.25em;
+    margin: 0 auto;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+}
+
+div.lista{
+    text-align: center;
+}
+
+ul {
+    font-size: 1.25em;
+    display: inline-block;
+    text-align: left;
+    list-style-type: square;
+}
+
+li::marker{
+    color: #5cff98;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+a {
+    color: #5cff98;
+    text-decoration: none;
+}
+
+.nawigacja{
+    border-radius: 0%;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-image: rgb(20, 20, 20);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.nawigacja a{
+    color: white;
+    margin: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.nawigacja a:hover{
+    background-color: none;
+    color: #5cff98;
+    transition: 0.3s;
+}   
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.gokarty{
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: -15px;
+}
+
+img{
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+img:hover{
+    border: 5px solid #5cff98;
+    transform: scale(1.05);
+    transition: 0.25s;
+    filter: none;
+}
+
+section{
+    background-image: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5vw;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+hr{
+    width: 100%;
+    max-width: 100%;
+    border: 5px solid #5cff98;
+    box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+    section, header, nav, footer {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 15px;
+        margin: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .gallery {
+        gap: 5px;
+    }
+
+    img, .gokarty {
+        margin: 5px 0;
+        transform: none !important;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 7vw;
+    }
+
+    h3, p, ul {
+        font-size: 1em;
+    }
+}
